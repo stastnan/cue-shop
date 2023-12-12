@@ -1,0 +1,1 @@
+const ahoj = "ahoj";
