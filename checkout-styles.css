@@ -141,3 +141,7 @@ form {
   font-size: 15px;
   margin: 2rem;
 }
+
+.form-title {
+  text-align: center;
+}
