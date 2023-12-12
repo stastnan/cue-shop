@@ -277,3 +277,16 @@
     margin-left: 20px;
     max-width: 650px;
   }
+
+  .stars{
+    display: flex;
+  align-items: center;
+  max-width: 90px;
+  }
+  .rating{
+    display: flex;
+    font-size: 15px;
+  }
+  .prime {
+    max-width: 100px;
+  }
