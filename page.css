@@ -267,3 +267,11 @@
       width: 50px;
       height: auto;
   }
+
+  /*PRODUCT NAME*/
+.gallery .description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
