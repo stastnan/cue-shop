@@ -34,7 +34,7 @@ body {
 
 #cart,
 #payment {
-  width: 85%;
+  width: 65%;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -71,8 +71,8 @@ input {
 }
 
 button {
-  background-color: #ff9900;
-  color: #fff;
+  background-color: #ffd712;
+  color: black;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -80,7 +80,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff6600;
+  background-color: #f7ca00;
 }
 
 .link-container {
@@ -92,7 +92,7 @@ button:hover {
 }
 
 .accordion {
-  width: 85%;
+  width: 95%;
   border-bottom: 1px solid #ddd;
   overflow: hidden;
   margin-top: 20px;
@@ -101,6 +101,7 @@ button:hover {
 
 .accordion__heading {
   color: #c45501;
+  font-size: 18px;
 }
 
 .accordion__intro {
@@ -110,7 +111,7 @@ button:hover {
 }
 
 .accordion__content {
-  padding: 0 20px;
+  padding: 0;
   margin-left: 2rem;
   max-height: 0;
   overflow: hidden;
@@ -143,7 +144,7 @@ form {
 }
 
 .help-container {
-  width: 85%;
+  width: 95%;
   margin-top: 2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -151,12 +152,16 @@ form {
   max-width: 80vw;
 }
 
+.help-text {
+  font-size: 12px;
+}
+
 .highlighted,
 #address-text {
   color: #007185;
 }
 
-.highlighted:hover:hover,
+.highlighted:hover,
 #address-text:hover {
   color: #c7501f;
   cursor: pointer;
@@ -183,7 +188,7 @@ form {
 
 #content-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .order-line {
@@ -211,4 +216,18 @@ form {
 
 .smaller-text {
   font-size: 14px;
+}
+
+#right-side-button {
+  background-color: #ffd712;
+  color: black;
+  margin: 1rem;
+  width: 90%;
+}
+#right-side-button:hover {
+  background-color: #f7ca00;
+}
+
+a {
+  text-decoration: none;
 }
