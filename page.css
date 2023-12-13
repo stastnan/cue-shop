@@ -218,7 +218,7 @@
 .grey-divide {
   height: 20px;
   border: #0f1111;
-  background-color: #e2e7e6;
+  background-color: #eae8e850;
 }
 /*PRODUCT AREA*/
 .bigdiv {
@@ -235,6 +235,7 @@
   margin: 0 auto;
   padding-left: 1%;
   padding-top: 2%;
+  
 }
 
 .gallery img {
@@ -336,6 +337,7 @@
   cursor: pointer;
   border-radius: 25px;
   width: 200px;
+  height: 40px;
 }
 .buy-button {
   background-color: #ff9114;
@@ -345,6 +347,7 @@
   cursor: pointer;
   border-radius: 25px;
   width: 200px;
+  height: 40px;
 }
 .business-offer {
   background-color: #232f3e;
@@ -353,4 +356,45 @@
   font-size: 14px;
   border-radius: 5px;
   margin-top: 10px;
+}
+
+/*RECOMMENDED PRODUCTS*/
+.recommendedproducts{
+display: flex;
+align-items: center;
+}
+.reproduct{
+  max-width:230px;
+  max-height: 230px;
+  background-color: #eae8e850;
+  justify-content: center;
+  padding: 1%;
+  margin-left:2%;
+}
+.reproduct img{
+  max-width:200px;
+  max-height: 200px;
+}
+.buytogether-button{
+  background-color: #ffd814;
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 200px;
+  height: 40px;
+  margin-left: 2%;
+}
+
+/*FOOTER*/
+.footer{
+  background-color: #eae8e850;
+  justify-content: center;
+  display: flex;
+  padding: 2%;
+}
+.footer p{
+  max-width: 30%;
+  text-align: center;
 }
