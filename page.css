@@ -223,19 +223,18 @@
 /*PRODUCT AREA*/
 .bigdiv {
   display: flex;
-  justify-self: center;
+  justify-content: space-around;
 }
 
 /* PRODUCT GALLERY*/
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-beween;
+  justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 auto;
+  margin: 0;
   padding-left: 1%;
   padding-top: 2%;
-  
 }
 
 .gallery img {
@@ -277,8 +276,8 @@
 .description {
   flex: 10%;
   margin-left: 20px;
-  max-width: 650px;
-  padding-top:2.5%
+  max-width: 800px;
+  padding-top: 2.5%;
 }
 
 .stars {
@@ -302,7 +301,6 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
- 
 }
 .price {
   font-size: 24px;
@@ -329,6 +327,16 @@
 .buy-options {
   margin-top: 10px;
 }
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .basket-button {
   background-color: #ffd814;
   border: none;
@@ -359,23 +367,23 @@
 }
 
 /*RECOMMENDED PRODUCTS*/
-.recommendedproducts{
-display: flex;
-align-items: center;
+.recommendedproducts {
+  display: flex;
+  align-items: center;
 }
-.reproduct{
-  max-width:230px;
+.reproduct {
+  max-width: 230px;
   max-height: 230px;
   background-color: #eae8e850;
   justify-content: center;
   padding: 1%;
-  margin-left:2%;
+  margin-left: 2%;
 }
-.reproduct img{
-  max-width:200px;
+.reproduct img {
+  max-width: 200px;
   max-height: 200px;
 }
-.buytogether-button{
+.buytogether-button {
   background-color: #ffd814;
   border: none;
   padding: 10px 50px;
@@ -388,13 +396,13 @@ align-items: center;
 }
 
 /*FOOTER*/
-.footer{
+.footer {
   background-color: #eae8e850;
   justify-content: center;
   display: flex;
   padding: 2%;
 }
-.footer p{
+.footer p {
   max-width: 30%;
   text-align: center;
 }
