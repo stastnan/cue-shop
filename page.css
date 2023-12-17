@@ -1,4 +1,4 @@
-* { 
+* {
   margin: 0%;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -226,6 +226,10 @@
   justify-content: space-around;
 }
 
+.content {
+  display: flex;
+}
+
 /* PRODUCT GALLERY*/
 .gallery {
   display: flex;
@@ -406,6 +410,6 @@
   max-width: 30%;
   text-align: center;
 }
-.boutghtTogether{
+.boutghtTogether {
   margin-left: 2%;
 }
