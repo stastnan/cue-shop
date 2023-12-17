@@ -1,4 +1,4 @@
-* {
+* { 
   margin: 0%;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -405,4 +405,7 @@
 .footer p {
   max-width: 30%;
   text-align: center;
+}
+.boutghtTogether{
+  margin-left: 2%;
 }
