@@ -1,3 +1,4 @@
+// FORMATTING FOR THE PAYMENT FORM INPUTS
 function formatCreditCardNumber(input) {
   let value = input.value.replace(/\D/g, "");
 
@@ -12,6 +13,7 @@ function formatExpirationDate(input) {
   input.value = value;
 }
 
+// CHECKOUT PAGE - ACCORDION
 const accordions = document.querySelectorAll(".accordion");
 
 const openAccordion = (accordion) => {
@@ -41,11 +43,11 @@ accordions.forEach((accordion) => {
   };
 });
 /* PRODUCT GALLERY*/
-const mainImage = document.querySelector('.main-image img');
-const thumbnails = document.querySelectorAll('.gallery div img');
+const mainImage = document.querySelector(".main-image .gallery-image-main");
+const thumbnails = document.querySelectorAll(".gallery .image ");
 
-thumbnails.forEach(thumbnail => {
-  thumbnail.addEventListener('click', () => {
-    mainImage.src = thumbnail.src.replace('/1000/', '/1000/');
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+    mainImage.src = thumbnail.src.replace("/1000/", "/1000/");
   });
 });
