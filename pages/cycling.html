@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Utilate Clothing - cycling gloves</title>
     <link rel="stylesheet" href="../page.css" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.jpg" />
     <link
@@ -13,19 +13,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="script.js" defer></script>
+    <script src="../script.js" defer></script>
   </head>
   <body>
     <header>
       <div class="navbar">
         <div class="nav-logo border">
-          <a href="index.html">
+          <a href="../index.html">
           <div class="logo"></div>
         </div></a>
         <a href="https://www.google.co.uk/maps/place/London,+ON,+Canada/@42.9490136,-81.4137691,11z/data=!3m1!4b1!4m6!3m5!1s0x882ef20ea88d9b0b:0x28c7d7699a056b95!8m2!3d42.9849233!4d-81.2452768!16zL20vMGIxdDE?entry=ttu">
         <div class="nav-address border">
-          <a href="https://www.google.co.uk/maps/place/London,+ON,+Canada/@42.9490136,-81.4137691,11z/data=!3m1!4b1!4m6!3m5!1s0x882ef20ea88d9b0b:0x28c7d7699a056b95!8m2!3d42.9849233!4d-81.2452768!16zL20vMGIxdDE?entry=ttu">
-            <p>Deliver to</p></a>
+            <p>Deliver to</p>
             <div class="address-icon">
               <i class="fa-solid fa-location-dot"></i>
               <p>London</p>
@@ -56,10 +55,12 @@
           <p class="first-line">Return</p>
           <p class="second-line">& Orders</p>
         </div>
-        <div class="nav-shopping-cart border">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <p>Cart</p>
-        </div>
+        <a href="../checkout.html">
+          <div class="nav-shopping-cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Cart</p>
+          </div>
+        </a>
       </div>
 
       <div class="panel">
@@ -147,8 +148,8 @@
       <div class="product-listing">
         <div class="price">£25.00 <span class="prime-tag">prime</span></div>
         <div class="delivery-info">
-          FREE Returns<br />FREE delivery Thursday, 14 December. Order within 3
-          hrs 42 mins.
+          FREE Returns<br />FREE delivery Thursday, 14 December.
+          <span id="deliveryTime"></span>
         </div>
         <div class="stock-status">In stock</div>
         <div class="buy-options">

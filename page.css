@@ -293,6 +293,8 @@ a {
   display: flex;
   align-items: center;
   max-width: 90px;
+  margin-left: 2px;
+  margin-right: 3px;
 }
 .rating {
   display: flex;
