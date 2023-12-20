@@ -3,6 +3,11 @@
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+/* LINKS STYLING */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 /* nav bar  */
 .navbar {
   height: 60px;
