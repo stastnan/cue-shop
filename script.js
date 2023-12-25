@@ -56,22 +56,20 @@ thumbnails.forEach((thumbnail) => {
 
 
 /*DELIVERY TIMES*/
-function getRandomDeliveryTime() 
-{
-let randomHours;
-let randomMinutes;
+function getRandomDeliveryTime() {
+  let randomHours;
+  let randomMinutes;
 
-randomHours = Math.floor(Math.random()*24);
-randomMinutes = Math.floor(Math.random()*60);
+  randomHours = Math.floor(Math.random() * 24);
+  randomMinutes = Math.floor(Math.random() * 60);
 
-let timeMinutes = (randomMinutes === 1)?
-'min' : 'mins';
-let timeHours = (randomHours === 1)?
-'hr' : 'hrs';
+  let timeMinutes = (randomMinutes === 1) ? 'min' : 'mins';
+  let timeHours = (randomHours === 1) ? 'hr' : 'hrs';
 
-let timeDelivery = `Order within ${randomHours} ${timeHours} ${randomMinutes} ${timeMinutes}` ;
-return timeDelivery;
+  let timeDelivery = `Order within ${randomHours} ${timeHours} ${randomMinutes} ${timeMinutes}`;
+  return timeDelivery;
 }
+
 const randomDeliveryTime = getRandomDeliveryTime();
 console.log(randomDeliveryTime);
 
@@ -80,15 +78,21 @@ deliveryDisplay.innerHTML = randomDeliveryTime;
 
 
 /*DELIVERY DATE*/
-function deliveryDate(){
-let today = new Date();
-const nextDay = new Date(today);
-nextDay.setDate(today.getDate() + 1);
-let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const dayName = new Intl.DateTimeFormat("en-GB", { weekday: "long" }).format(nextDay);
-const date = nextDay.getDate();
-  const month = monthNames[nextDay.getMonth()];
+function deliveryDate() {
+  let today = new Date();
+  const nextDay = new Date(today);
+  nextDay.setDate(today.getDate() + 1);
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const dayName = new Intl.DateTimeFormat("en-GB", { weekday: "long" }).format(nextDay);
+  const date = nextDay.getDate();
+  const month = months[nextDay.getMonth()];
 
-  let delDate = `FREE delivery ${dayName}, ${date} ${months}.` ;
-
+  let delDate = `FREE delivery ${dayName}, ${date} ${month}.`;
+  return delDate;
 }
+
+const deliveryDate1 = deliveryDate();
+console.log(deliveryDate1);
+
+let deliveryDisplay1 = document.getElementById("deliveryDate1");
+deliveryDisplay1.innerHTML = deliveryDate1;
