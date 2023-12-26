@@ -10,11 +10,6 @@ a {
 }
 
 /*COOKIES*/
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 #cookie-notification {
   position: fixed;
   bottom: 0;
@@ -50,7 +45,7 @@ body {
 }
 
 .cookie-button:hover {
-  background-color: #f0f2f5; /* Amazon's hover background color */
+  background-color: #e1ce00; /* Amazon's hover background color */
 }
 
 /* nav bar  */
@@ -250,13 +245,21 @@ body {
 }
 
 .box-img {
-  height: 300px;
+  height: 310px;
   width: 290px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.box {
+display: flex;
+flex-direction: column; /* Assuming a vertical layout for the box content */
+justify-content: space-between; /* Adjust as needed */
+align-items: center;
 .box-content {
   padding: 0px 1rem;
 }
