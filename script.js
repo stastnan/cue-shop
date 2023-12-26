@@ -1,16 +1,20 @@
-// FORMATTING FOR THE PAYMENT FORM INPUTS
-function formatCreditCardNumber(input) {
-  let value = input.value.replace(/\D/g, "");
-
-  value = value.replace(/(\d{4})/g, "$1 ").slice(0, 19);
-
-  input.value = value;
+//COOKIES
+function acceptCookies() {
+  alert("Thank you for accepting cookies on our site. We will remember that and will not ask about it again. We will also remember your email address, location and everything else you input. Thanks.");
+  closeNotification();
 }
 
-function formatExpirationDate(input) {
-  let value = input.value.replace(/\D/g, "");
-  value = value.replace(/(\d{2})/g, "$1/").slice(0, 5);
-  input.value = value;
+function learnMore() {
+  window.location.href = 'error.html';
+}
+
+function rejectCookies() {
+  alert("We value your opinion and therefore are rejecting your choice and will still keep all the info and shove as many cookies down your throat as you let us.");
+  closeNotification();
+}
+
+function closeNotification() {
+  document.getElementById('cookie-notification').style.display = 'none';
 }
 
 /*CHECKOUT PAGE - ACCORDION*/
@@ -96,3 +100,21 @@ console.log(deliveryDate1);
 
 let deliveryDisplay1 = document.getElementById("deliveryDate1");
 deliveryDisplay1.innerHTML = deliveryDate1;
+
+/*DOWNLOAD + WINDOW in PLUGIN*/
+function downloadFile(filePath) {
+  // create a new invisible link
+  let link = document.createElement('a');
+  link.style.display = 'none';
+  document.body.appendChild(link);
+
+  // set the link's attributes
+  link.href = filePath;
+  link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+
+  // trigger the download
+  link.click();
+
+  // remove the link from the DOM
+  document.body.removeChild(link);
+}
