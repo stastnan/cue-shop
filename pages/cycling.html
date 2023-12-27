@@ -14,6 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <script src="../script.js" defer></script>
+    <script src="../cart.js" defer></script>
   </head>
   <body>
     <header>
@@ -57,6 +58,7 @@
         </div>
         <a href="../checkout.html">
           <div class="nav-shopping-cart border">
+            <div class="cart-number" id="cart-number"></div>
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Cart</p>
           </div>
@@ -179,7 +181,7 @@
           <br />
           <br />
           <div class="button-container">
-            <button class="basket-button">Add to Basket</button>
+            <button id="basket-button" class="basket-button">Add to Basket</button>
             <a href="../error.html">
             <button class="buy-button">Buy Now</button>
             </a>
