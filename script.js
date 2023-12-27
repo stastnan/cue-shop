@@ -1,20 +1,24 @@
 //COOKIES
 function acceptCookies() {
-  alert("Thank you for accepting cookies on our site. We will remember that and will not ask about it again. We will also remember your email address, location and everything else you input. Thanks.");
+  alert(
+    "Thank you for accepting cookies on our site. We will remember that and will not ask about it again. We will also remember your email address, location and everything else you input. Thanks."
+  );
   closeNotification();
 }
 
 function learnMore() {
-  window.location.href = 'error.html';
+  window.location.href = "error.html";
 }
 
 function rejectCookies() {
-  alert("We value your opinion and therefore are rejecting your choice and will still keep all the info and shove as many cookies down your throat as you let us.");
+  alert(
+    "We value your opinion and therefore are rejecting your choice and will still keep all the info and shove as many cookies down your throat as you let us."
+  );
   closeNotification();
 }
 
 function closeNotification() {
-  document.getElementById('cookie-notification').style.display = 'none';
+  document.getElementById("cookie-notification").style.display = "none";
 }
 
 /*CHECKOUT PAGE - ACCORDION*/
@@ -47,7 +51,6 @@ accordions.forEach((accordion) => {
   };
 });
 
-
 /* PRODUCT GALLERY*/
 const mainImage = document.querySelector(".main-image .gallery-image-main");
 const thumbnails = document.querySelectorAll(".gallery .image ");
@@ -58,7 +61,6 @@ thumbnails.forEach((thumbnail) => {
   });
 });
 
-
 /*DELIVERY TIMES*/
 function getRandomDeliveryTime() {
   let randomHours;
@@ -67,8 +69,8 @@ function getRandomDeliveryTime() {
   randomHours = Math.floor(Math.random() * 24);
   randomMinutes = Math.floor(Math.random() * 60);
 
-  let timeMinutes = (randomMinutes === 1) ? 'min' : 'mins';
-  let timeHours = (randomHours === 1) ? 'hr' : 'hrs';
+  let timeMinutes = randomMinutes === 1 ? "min" : "mins";
+  let timeHours = randomHours === 1 ? "hr" : "hrs";
 
   let timeDelivery = `Order within ${randomHours} ${timeHours} ${randomMinutes} ${timeMinutes}`;
   return timeDelivery;
@@ -80,14 +82,28 @@ console.log(randomDeliveryTime);
 let deliveryDisplay = document.getElementById("deliveryTime");
 deliveryDisplay.innerHTML = randomDeliveryTime;
 
-
 /*DELIVERY DATE*/
 function deliveryDate() {
   let today = new Date();
   const nextDay = new Date(today);
   nextDay.setDate(today.getDate() + 1);
-  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const dayName = new Intl.DateTimeFormat("en-GB", { weekday: "long" }).format(nextDay);
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayName = new Intl.DateTimeFormat("en-GB", { weekday: "long" }).format(
+    nextDay
+  );
   const date = nextDay.getDate();
   const month = months[nextDay.getMonth()];
 
@@ -104,13 +120,13 @@ deliveryDisplay1.innerHTML = deliveryDate1;
 /*DOWNLOAD + WINDOW in PLUGIN*/
 function downloadFile(filePath) {
   // create a new invisible link
-  let link = document.createElement('a');
-  link.style.display = 'none';
+  let link = document.createElement("a");
+  link.style.display = "none";
   document.body.appendChild(link);
 
   // set the link's attributes
   link.href = filePath;
-  link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+  link.download = filePath.substr(filePath.lastIndexOf("/") + 1);
 
   // trigger the download
   link.click();
@@ -118,3 +134,10 @@ function downloadFile(filePath) {
   // remove the link from the DOM
   document.body.removeChild(link);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cartNumberDiv = document.getElementById("cart-number");
+  let counter = localStorage.getItem("cartCounter") || 0;
+
+  cartNumberDiv.innerHTML = counter;
+});

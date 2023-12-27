@@ -131,6 +131,7 @@ a {
 /* box 5  */
 .nav-shopping-cart {
   padding: 5px 10px;
+  position: relative;
 }
 
 /* panel */
@@ -419,4 +420,16 @@ a {
 }
 .boutghtTogether {
   margin-left: 2%;
+}
+
+/* numbers of items in the cart */
+.cart-number {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 1%;
+  right: 10%;
+  color: rgb(255, 132, 0);
+  text-align: center;
+  font-size: 0.8rem;
 }
