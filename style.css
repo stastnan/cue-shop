@@ -246,15 +246,16 @@ a {
 }
 
 .box-img {
-  height: 310px;
-  width: 290px;
+  height: 92%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.1em;
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover;
 }
 .box {
   display: flex;
@@ -264,10 +265,18 @@ a {
 }
 .box-content {
   padding: 0px 1rem;
+  width: 97%;
+  height: 95%;
 }
 
 .box-content h2 {
   font-size: 1.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 
 .box-content p {
@@ -279,19 +288,13 @@ a {
 }
 
 .multiple .box .box-img {
-  width: 290px;
-  height: 300px;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  justify-items: center;
-  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .multiple .box .box-img div {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   background-size: cover;
   background-position: center center;
 }
