@@ -3,6 +3,11 @@
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+/* LINKS STYLING */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 /* nav bar  */
 .navbar {
   height: 60px;
@@ -288,6 +293,8 @@
   display: flex;
   align-items: center;
   max-width: 90px;
+  margin-left: 2px;
+  margin-right: 3px;
 }
 .rating {
   display: flex;

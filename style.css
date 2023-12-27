@@ -3,6 +3,51 @@
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+/* LINKS STYLING */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*COOKIES*/
+#cookie-notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #232f3e; /* Amazon's color */
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cookie-notification-text {
+  max-width: 80%;
+}
+
+#cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #232f3e; /* Amazon's text color */
+  background-color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cookie-button:hover {
+  background-color: #e1ce00; /* Amazon's hover background color */
+}
+
 /* nav bar  */
 .navbar {
   height: 60px;
@@ -200,13 +245,21 @@
 }
 
 .box-img {
-  height: 300px;
+  height: 310px;
   width: 290px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.box {
+display: flex;
+flex-direction: column; /* Assuming a vertical layout for the box content */
+justify-content: space-between; /* Adjust as needed */
+align-items: center;
 .box-content {
   padding: 0px 1rem;
 }
