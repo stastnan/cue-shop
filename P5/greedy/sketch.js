@@ -2,7 +2,7 @@ let circleY = [];
 let squareY = [];
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 5000; i++) {
     circleY[i] = random(height);
   }

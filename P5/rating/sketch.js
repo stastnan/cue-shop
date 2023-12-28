@@ -1,48 +1,54 @@
-let circleY = [];
-let squareY = [];
+var bigSpeed = 7;
+var bigSpeedy = 0;
+var starArray = [];
+var bigSize = 5;
 
-function setup() {
-  createCanvas(1920, 1080);
-  for (let i = 0; i < 5000; i++) {
-    circleY[i] = random(height);
+function setup() { 
+  createCanvas(windowWidth, windowHeight);
+  background(0);
+  for(var i = 0; i < 100; i++){
+    var star = new StarBit();
+    starArray.push(star);
   }
-  for (let j = 0; j < 5000; j++) {
-    squareY[j] = random(height);
+} 
+
+function draw() { 
+  background(0, 60);
+  for(var i = 0; i < starArray.length; i++){
+    starArray[i].move();
+    starArray[i].display();
   }
+  bigSpeed = map(mouseX, 0, width, -3, 3);
+  bigSpeedy = map(mouseY, 0, height, -3, 3);
+
+  // White text at the bottom
+  fill(25, 100, 0);
+  textSize(10);
+  textAlign(CENTER, BOTTOM);
+  text("Whose destiny you want to cross next?", width / 2, height - 10);
 }
 
-function draw() {
-  background(255,201,0);
-  stroke('white');
-  fill(255,201,0);
+function StarBit(){
+  this.angle = map(random(), 0, 1, 0, TWO_PI); // Start at a random angle around the circle
+  this.distance = random(0, min(width, height) / 2);
+  this.d = map(this.distance, 0, min(width, height) / 2, 0.2, 3);
+  this.relativeSpeed = this.distance / 100 * bigSpeed;
 
-  for (let i = 0; i < circleY.length; i++) {
-    let circleX = width * i / circleY.length;
-    circle(circleX, circleY[i], 25);
-
-    circleY[i]++;
-    
-    if (circleY[i] > height) {
-      circleY[i] = 0;
-    }
+  this.move = function(){
+    // Move in a circular trajectory
+    this.x = width / 2 + cos(this.angle) * this.distance;
+    this.y = height / 2 + sin(this.angle) * this.distance;
+    this.angle += radians(this.relativeSpeed);
   }
-  for (let j = 0; j < squareY.length; j++) {
-    let squareX = width * j / squareY.length;
-    rect(squareX, squareY[j], 15, 15);
 
-    squareY[j]++;
-    
-    if (squareY[j] > height) {
-      squareY[j] = 0;
-    }
+  this.display = function(){
+    fill(255, 255, 0); // Yellow color
+    noStroke();
+    ellipse(
+      this.x,
+      this.y,
+      this.d * (map(noise(this.x, this.y, 0.001 * frameCount), 0, 1, 0.2, 1.5)),
+      this.d * (map(noise(this.x, this.y, 0.001 * frameCount), 0, 1, 0.2, 1.5))
+    );
   }
-stroke(255,190,0);
-  textSize(64);
-  textAlign(CENTER, CENTER);
-  textFont('Times New Roman');
-  text("Don't be greedy", width/2, height/2);
-  textSize(30);
-  textAlign(CENTER, CENTER);
-  textFont('Times New Roman');
-  text("we can see you", 1000, 580);
 }
