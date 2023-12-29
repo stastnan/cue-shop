@@ -5,12 +5,11 @@ let a = 0;
 let aspeed = 1;
 
 function setup() {
-  // Grab the stream from the webcam
+  // WEBCAM STREAM
   cam = createCapture(VIDEO);
-  // Set the size of the camera
   cam.size(windowWidth, windowHeight);
   cam.hide();
-  // Match the canvas size to the camera size
+  // MATCH CANVAS TO CAMERA SIZE
   createCanvas(cam.width, cam.height);
 }
 
@@ -25,7 +24,7 @@ function draw() {
   push();
   scale(-1, 1);
   // Copy from x,y and w/2,h and Paste to -w,y,w/2,h
-  // Making a perfectly symmetrical face
+
 
   copy(cam, 0, 0, width / 2, height, -width, 0, width / 2, height);
   pop();

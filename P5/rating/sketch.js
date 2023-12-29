@@ -1,3 +1,5 @@
+//credit: https://editor.p5js.org/lumar/sketches/ryqvb2crz
+
 var bigSpeed = 7;
 var bigSpeedy = 0;
 var starArray = [];

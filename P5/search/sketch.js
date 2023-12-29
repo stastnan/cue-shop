@@ -2,7 +2,7 @@
 
 let radius;
 let angle;
-var step; //distance between steps in radians
+var step;
 let redValue, greenValue, blueValue;
 let saveButton;
 let canvas;
@@ -16,8 +16,6 @@ function setup() {
   
   saveButton = createButton("Save Canvas");
   saveButton.mousePressed(save);
-  // copyButton = createButton('Copy Canvas');
-  // copyButton.mousePressed(copyCanvas);
   resetButton = createButton('RESET');
   resetButton.mousePressed(resetSketch)
 }
@@ -26,12 +24,11 @@ function randomDeviation() {
   return random(maxDeviation * -1, maxDeviation);
 }
 function draw() {
-  // Make the center of the screen the new (0, 0)
   translate(width / 2, height / 2);
 
   radius += 1;
 
-  // Convert polar coordinates to cartesian coordinates
+  // CONVERTING COORDINATES
   var x = radius * sin(angle);
   var y = radius * cos(angle);
 
@@ -42,11 +39,9 @@ function draw() {
   );
   stroke(randomColor);
   fill(randomColor);
-
-  // Draw a circle at each point around circle
+// CIRCLES
   rect(x, y, radius);
 
-  // Move to next angle
   angle = angle + step;
 fill("white")
   text("time to be scared of the results?", -800, 400);

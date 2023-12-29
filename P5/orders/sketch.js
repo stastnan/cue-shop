@@ -1,3 +1,4 @@
+// BASED ON A P5JS DEFAULT EXAMPLE: https://p5js.org/examples/transform-rotate.html
 let angle = 0.0;
 let jitter = 0.0;
 
@@ -19,15 +20,15 @@ function draw() {
   // Use cosine to get a smooth CW and CCW motion when not jittering
   let c = cos(angle);
 
-  // Set background with a changing gradient
+  // BACKGROUND WITH GRADIENT
   let c1 = color(255, 100, 0);
   let c2 = color(0, 100, 255);
   background(lerpColor(c1, c2, 0.5 + 0.5 * cos(angle)));
 
  
-  translate(0, 0);// centre of canvas
+  translate(0, 0);// CENTRE OF CANVAS
 
   rotateX(c);
   rotateY(c);
-  box(180); // cube
+  box(180); // CUBE
 }

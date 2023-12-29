@@ -13,14 +13,14 @@ let vol = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  // create a video capture 
+  // VIDEO CAPTURE
   video = createCapture(VIDEO);
   video.size(640, 480);
   video.hide();
   mic = new p5.AudioIn();
   mic.start();
 
-  // create an element for the error message
+  // ERROR MESSAGE
   errorMessage = createP('Sorry, there was an error in this feature. Please exit the website. Error log generated.');
   errorMessage.style('color', 'red');
   errorMessage.style('font-family', 'Arial');
@@ -28,7 +28,7 @@ function setup() {
   errorMessage.style('font-weight', 'bold');
   errorMessage.style('text-align', 'center');
 
-  // create a button that captures a picture and downloads it
+  // BUTTON = CAPTURE + DOWNLOAD
   captureButton = createButton('Exit page');
   captureButton.position(width / 2 - 150, height / 2 + 50);
   captureButton.mousePressed(captureAndDownload);
@@ -37,23 +37,23 @@ function setup() {
 }
 
 function draw() { 
-  // Display the error message
+  // ERROR MESSAGE
   errorMessage.position(width / 2 - errorMessage.width / 2, height / 2 - 50);
 }
 
 function captureAndDownload() {
-  // capture a picture
+  // CAPTURE
   let picture = video.get();
 
-  // create a temporary link and trigger a click to download
+  // DOWNLOAD TEMPORARY LINK
   let link = document.createElement('a');
 
-  // Set a custom file name and directory
-  let fileName = 'errorlog'; // specify the file name without extension
-  let fileExtension = 'png'; // specify the desired file extension
+  // CAPTURE FILE NAME
+  let fileName = 'errorlog';
+  let fileExtension = 'png'; 
 
   link.href = picture.canvas.toDataURL('image/' + fileExtension);
-  link.download = fileName + '.' + fileExtension; // concatenate the file name and extension
+  link.download = fileName + '.' + fileExtension;
 
   document.body.appendChild(link);
   link.click();

@@ -1,3 +1,4 @@
+// initial inspiration: https://happycoding.io/tutorials/p5js/arrays
 let circleY = [];
 let squareY = [];
 

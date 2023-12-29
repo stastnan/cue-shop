@@ -51,5 +51,5 @@ function draw() {
   textSize(60);
   fill(textColor, 255, 255);
   text("are you buying more stuff yet?", 100, 200);
-  textColor = (textColor + 1) % 360;
+  textColor = (textColor + 1) % 360; // text colour
 }
