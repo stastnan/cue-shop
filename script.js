@@ -141,3 +141,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cartNumberDiv.innerHTML = counter;
 });
+
+//BASKET FULL
+
+ function removeItem(productId) {
+alert('There was an error. You now must poceed with the transaction.')
+  console.log(`Item ${productId} removed`);
+}
+
+function checkout() {
+  // Implement logic for the checkout process
+  console.log("Checkout initiated");
+}
