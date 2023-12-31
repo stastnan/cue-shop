@@ -153,3 +153,57 @@ function checkout() {
   // Implement logic for the checkout process
   console.log("Checkout initiated");
 }
+
+/*LOCK ICON LOCATION+RECORDING */
+
+function lockAlert(productId) {
+  alert("You are safe. We are all safe. Or trapped. Depends on how you look at it.");
+  console.log(`Item ${productId} removed`);
+}
+
+/* ADDRESS OVERLAY */
+let locationData; // Variable to store location data
+function showContent() {
+  // Request location information 
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      console.log('Location:', position.coords);
+      locationData = position.coords; // Store location data
+    },
+    (error) => {
+      console.error('Error getting location:', error);
+    }
+  );
+
+  // Start recording using the device's microphone (Note: Requires user permission)
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then((stream) => {
+      console.log('Recording started');
+      // You can handle the audio stream here
+    })
+    .catch((error) => {
+      console.error('Error starting recording:', error);
+    });
+
+  // Hide the overlay and show the content
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('content-container').style.display = 'block';
+
+  // Allow scrolling after clicking the + symbol
+  document.body.style.overflow = 'auto';
+}
+
+// Function to download location data as a file
+function downloadLocationData() {
+  const data = JSON.stringify(locationData);
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'location_data.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}

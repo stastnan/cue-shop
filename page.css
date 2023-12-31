@@ -434,20 +434,20 @@ a {
   font-family: Arial, sans-serif;
   margin: 0 auto;
   padding: 20px;
-  width: 50%;
+  width: 40%;
 }
 
 .basket-item {
   border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .basket-item img {
-  max-width: 10%;
+  max-width: 15%;
 }
 
 .basket-item .item-details {
