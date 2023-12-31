@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.jpg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        background-color: black;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10px;
+      }
+
+      .grid-item img {
+        max-width: 100%;
+        height: auto;
+        max-height: 450px;
+      }
+
+      .description {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="../assets/werewolf-v2.jpg" alt="Image 1" />
+        <div class="description">Short description for Image 1.</div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v3.jpg" alt="Image 2" />
+        <div class="description">Short description for Image 2.</div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v4.jpg" alt="Image 3" />
+        <div class="description">Short description for Image 3.</div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf2.png" alt="Image 4" />
+        <div class="description">Short description for Image 4.</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //BASKET FULL
 
- function removeItem(productId) {
-alert('There was an error. You now must poceed with the transaction.')
+function removeItem(productId) {
+  alert("There was an error. You now must poceed with the transaction.");
   console.log(`Item ${productId} removed`);
 }
 

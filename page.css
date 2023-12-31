@@ -226,11 +226,6 @@ a {
   border: #0f1111;
   background-color: #eae8e850;
 }
-/*PRODUCT AREA*/
-.bigdiv {
-  display: flex;
-  justify-content: space-around;
-}
 
 .content {
   display: flex;
