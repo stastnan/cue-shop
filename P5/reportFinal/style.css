@@ -3,13 +3,24 @@ body {
   color: rgb(0, 0, 0);
   margin: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  font-family: 'Avenir', sans-serif;
+  overflow-y: scroll;
 }
+
 h1 {
   color: white;
+  font-family: 'Avenir', sans-serif; 
 }
+
 h3 {
   color: antiquewhite;
+  font-family: 'Avenir', sans-serif; 
 }
+
 canvas {
   width: 100%;
   height: 100%;
@@ -18,16 +29,6 @@ canvas {
   top: 0;
   left: 0;
   z-index: -9999;
-}
-body {
-  background-color: black;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* 100% of the viewport height */
 }
 
 .maincontent {
@@ -72,5 +73,5 @@ body {
 
 .side-image {
   max-width: 30%;
-  margin-left: 20px; /* Adjust as needed */
+  margin-left: 20px;
 }
