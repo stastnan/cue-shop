@@ -19,10 +19,58 @@ canvas {
   left: 0;
   z-index: -9999;
 }
+body {
+  background-color: black;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% of the viewport height */
+}
+
 .maincontent {
   margin-top: 1%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-} 
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-content {
+  max-width: 60%;
+}
+
+.photoandsound,
+.cardinfo,
+.addressinfo,
+.otherinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.photoandsound h3,
+.cardinfo h3,
+.addressinfo h3,
+.otherinfo h3 {
+  margin-bottom: 10px;
+}
+
+.addressinfo a {
+  color: #3498db;
+}
+
+.side-image {
+  max-width: 30%;
+  margin-left: 20px; /* Adjust as needed */
+}

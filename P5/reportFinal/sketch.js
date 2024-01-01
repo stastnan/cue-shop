@@ -15,5 +15,5 @@ function draw() {
   textSize(80);
   fill('black');
   textAlign(CENTER, CENTER);
-  text("I wouldn't do that...", width /2, 50);
+  text("Told you not to do that!", width /2, 50);
 }
