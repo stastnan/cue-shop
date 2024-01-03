@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="your-styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        background-color: black;
+      }
+
+      .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .grid-item {
+        flex: 0 1 calc(50% - 200px);
+        box-sizing: border-box;
+      }
+
+      .grid-item img {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
+
+      .description {
+        margin-top: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="../assets/werewolf-v2.png" alt="Image 1" />
+        <div class="description">Alfie</div>
+        <div class="description">
+          If you are looking for companion, Alfie is the one to sit by. You'll
+          have to keep your distance so he doesn't tear you apart. But his
+          emotional range exceeds that of many humans.
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v3.png" alt="Image 2" />
+        <div class="description">Ben</div>
+        <div class="description">
+          Ben is getting older but you wouldn't be able to tell by his daily
+          acitivty. He loves to play with round objects, throwing and chasing
+          after them for hours. When he finally gets tired, a bucket of blood
+          disappears in that hungry guy in a blink of an eye.
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v4.png" alt="Image 3" />
+        <div class="description">Punto</div>
+        <div class="description">
+          Punto has been with our foundation for a few years. He can get a
+          little grumpy, but a roasted leg will always win him over. Get behind
+          him a takle this big fella. He'll put up a fight, but once you start
+          scratching behind his ears, he is yours.
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf2.png" alt="Image 4" />
+        <div class="description">Chico</div>
+        <div class="description">
+          One of our kindset werewolfs, loves bellyrubs and human flesh. He can
+          be a little shy, mostly hiding in the shadows of his cave. But when he
+          coems out, the entire office comes to play with him.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

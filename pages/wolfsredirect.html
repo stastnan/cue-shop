@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- REDIRECTING SCRIPT + ATTEMPT TO CREATE A LOOP -->
+    <script>
+//       function redirectToNewPage() {
+//       window.location.replace('../P5/reportLand/index.html');
+//     }
+
+//     window.onload = function() {
+//       redirectToNewPage();
+
+//       if (window.history.replaceState) {
+//         history.replaceState(null, document.title, location.href);
+//       }
+//     };
+
+//     window.onload = function () {
+//   // Add an entry to the browser's history
+//   history.replaceState(null, document.title, location.href);
+//   // Redirect to your desired page
+//   window.location.replace("../P5/reportLand/index.html");
+// setTimeout(() => {
+//   window.location.href = '../P5/reportLand/index.html';
+//   }, 1000); // Redirect after 1 second
+
+//   // Listen for changes in the browser's history
+//   window.addEventListener("popstate", function () {
+//     // Redirect again if the user tries to navigate back
+//     window.location.replace("../P5/reportLand/index.html");
+//   });
+// };
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Replace the current history entry with the redirecting page
+  history.replaceState(null, document.title, location.href);
+
+
+  setTimeout(() => {
+    window.location.href = '../P5/reportLand/index.html';
+  }, 300); 
+});
+
+    </script>
+    <!-- END OF REDIRECTING -->
+    <link rel="stylesheet" href="your-styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        background-color: black;
+      }
+
+      .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .grid-item {
+        flex: 0 1 calc(50% - 200px);
+        box-sizing: border-box;
+      }
+
+      .grid-item img {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
+
+      .description {
+        margin-top: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="../assets/werewolf-v2.png" alt="Image 1" />
+      
+       
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v3.png" alt="Image 2" />
+        
+       
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf-v4.png" alt="Image 3" />
+       
+        
+      </div>
+
+      <div class="grid-item">
+        <img src="../assets/werewolf2.png" alt="Image 4" />
+      
+       
+      </div>
+    </div>
+  </body>
+</html>

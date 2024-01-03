@@ -226,11 +226,6 @@ a {
   border: #0f1111;
   background-color: #eae8e850;
 }
-/*PRODUCT AREA*/
-.bigdiv {
-  display: flex;
-  justify-content: space-around;
-}
 
 .content {
   display: flex;
@@ -432,4 +427,30 @@ a {
   color: rgb(255, 132, 0);
   text-align: center;
   font-size: 0.8rem;
+}
+
+/* BASKET FULL */
+.basket {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  width: 40%;
+}
+
+.basket-item {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basket-item img {
+  max-width: 15%;
+}
+
+.basket-item .item-details {
+  flex-grow: 1;
+  padding-right: 10px;
 }
