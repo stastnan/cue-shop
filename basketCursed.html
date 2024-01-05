@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket</title>
+    <link rel="stylesheet" href="../page.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../script.js" defer></script>
+    <script src="../cart.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-logo border">
+          <a href="../P5/run/index.html">
+            <div class="logo"></div>
+          </a>
+        </div>
+        <div class="nav-address border">
+          <a href="../P5/run/index.html">
+            <p>Deliver to</p>
+            <div class="address-icon">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>London</p>
+            </div>
+          </a>
+        </div>
+        <div class="nav-search">
+          <select class="search-select">
+            <option value="">All</option>
+            <option value="">Clothing</option>
+            <option value="">Kitchen</option>
+            <option value="">Electronics</option>
+            <option value="">Car</option>
+            <option value="">Pets</option>
+            <option value="">Torture devices</option>
+            <option value="">Illegal powders</option>
+            <option value="">Weapons</option>
+            <option value="">Organs</option>
+            <option value="">Trouble</option>
+          </select>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Search Amazon"
+            class="search-input"
+          />
+          <div class="search-icon">
+            <a href="../P5/run/index.html">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+        </div>
+        <a href="../P5/run/index.html">
+          <div class="nav-sign-in border">
+            <p class="first-line">Hello, Mark</p>
+            <p class="second-line">Account & Lists</p>
+          </div>
+        </a>
+        <a href="../P5/run/index.html">
+          <div class="nav-return border">
+            <p class="first-line">Return</p>
+            <p class="second-line">& Orders</p>
+          </div>
+        </a>
+        <a href="../P5/run/index.html">
+          <div class="nav-shopping-cart border">
+            <div class="cart-number" id="cart-number"></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Cart</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="panel">
+        <a href="../P5/run/index.html">
+          <div class="panel-all border">
+            <i class="fa-solid fa-bars"></i>
+            All
+          </div>
+        </a>
+        <div class="panel-option">
+          <a href="../P5/run/index.html">
+            <p class="border">Grocery</p>
+          </a>
+          <a href="../P5/run/index.html">
+            <p class="border">Today's deal</p>
+          </a>
+          <a href="../P5/run/index.html">
+            <p class="border">Buy Again</p>
+          </a>
+          <a href="../P5/run/index.html">
+            <p class="border">Gift Cards & Top Up</p>
+          </a>
+          <a href="../P5/run/index.html">
+            <p class="border">Amazan Business</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="grey-divide"></div>
+
+    <!-- BASKET AREA -->
+    <div class="basket">
+      <h1>Basket</h1>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>Super sharp knife perfect for car ...</h2>
+          </a>
+          <p>Price: £38.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/knife.jpeg" alt="Product Image" />
+      </div>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>Extra strong black tape, hard to ...</h2>
+          </a>
+          <p>Price: £10.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/tape.jpeg" alt="Product Image" />
+      </div>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>No residue black latex gloves incog ...</h2>
+          </a>
+          <p>Price: £8.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/gloves.webp" alt="Product Image" />
+      </div>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>Super-strong large bags for body ...</h2>
+          </a>
+          <p>Price: £5.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/binbag.jpeg" alt="Product Image" />
+      </div>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>Simple phone, cheap burner ...</h2>
+          </a>
+          <p>Price: £60.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/phone.jpeg" alt="Product Image" />
+      </div>
+
+      <div class="basket-item">
+        <div class="item-details">
+          <a href="../P5/run/index.html">
+            <h2>Super strong rope no escape ...</h2>
+          </a>
+          <p>Price: £30.00</p>
+          <p>Quantity: 1</p>
+          <button onclick="removeItem(2)">Remove</button>
+        </div>
+        <img src="assets/products/rope.jpeg" alt="Product Image" />
+      </div>
+      <br />
+      <h2>Total: £151.00</h2>
+      <br />
+      <a href="../P5/run/index.html">
+        <button class="buytogether-button">Checkout</button>
+      </a>
+    </div>
+    <br />
+    <hr />
+    <div class="footer">
+      <p>
+        This is a university project highlighting our vulnerability on the
+        internet. This code is not for commercial purposes. It also does not aim
+        to reflect poorly on the Amazon brand. The site was selected based on
+        its universally recognised structure to drive the point.
+      </p>
+
+      <p></p>
+    </div>
+  </body>
+</html>
