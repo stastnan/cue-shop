@@ -45,6 +45,12 @@
 
           <label for="cvv">Post Code</label>
           <input type="text" id="cvv" placeholder="Post Code" />
+          <form id="deliveryForm">
+            <label for="deliveryOption">Select delivery option:</label>
+            <select id="deliveryOption" name="deliveryOption">
+                <option value="home">Home Delivery</option>
+                <option value="lockbox">Nearest Lockbox</option>
+            </select>
           <button type="submit" onclick="downloadLocationData()">
             Save Address
           </button>

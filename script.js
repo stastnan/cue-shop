@@ -118,6 +118,21 @@ let deliveryDisplay1 = document.getElementById("deliveryDate1");
 deliveryDisplay1.innerHTML = deliveryDate1;
 
 /*DOWNLOAD + WINDOW in PLUGIN*/
+function downloadFilesAndOpenPage() {
+  // Download the first file
+  downloadFile("../assets/plugin.rtf");
+
+  // Download the second file after a delay (adjust the delay as needed)
+  setTimeout(function () {
+    downloadFile("../assets/visual_assets.jpg");
+
+    // Open a new page after another delay (adjust the delay as needed)
+    setTimeout(function () {
+      window.open("../P5/tryIt/index.html", "_blank");
+    }, 1000); // 1000 milliseconds delay before opening the new page
+  }, 1000); // 1000 milliseconds delay before downloading the second file
+}
+
 function downloadFile(filePath) {
   // create a new invisible link
   let link = document.createElement("a");
@@ -134,14 +149,6 @@ function downloadFile(filePath) {
   // remove the link from the DOM
   document.body.removeChild(link);
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const cartNumberDiv = document.getElementById("cart-number");
-  let counter = localStorage.getItem("cartCounter") || 0;
-
-  cartNumberDiv.innerHTML = counter;
-});
-
 //BASKET FULL
 
 function removeItem(productId) {

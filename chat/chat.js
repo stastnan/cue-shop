@@ -116,7 +116,7 @@ function userSelection(selection) {
     } else if (
       botResponse
         .toLowerCase()
-        .includes("suspicious items from your live order")
+        .includes("this is the order you have been trying to process.")
     ) {
       changeButtons("That is not my order", "I ordered the wrong size");
     } else if (
@@ -260,7 +260,30 @@ function generateBotResponse(userQuestion) {
   ) {
     return "Don't change the topic. I can only do so much for you.";
   } else if (userQuestion.toLowerCase().includes("can you elaborate?")) {
-    return "Here is the list of the suspicious items from your live order. Click here to view: ../basketCursed.html";
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+
+    // Create an <img> element for the image
+    const imageElement = document.createElement("img");
+    imageElement.src = "../assets/basketCursed.png";
+    imageElement.alt = "Speak to someone else";
+
+    // Append the image to the container
+    imageContainer.appendChild(imageElement);
+
+    // Clear existing buttons and append the image container
+    userButtons.innerHTML = "";
+    chatMessages.appendChild(imageContainer);
+    imageElement.style.maxWidth = "650px"; 
+
+    // Append the image to the container
+    imageContainer.appendChild(imageElement);
+
+    // Clear existing buttons and append the image container
+    userButtons.innerHTML = "";
+    chatMessages.appendChild(imageContainer);
+
+    return "This is the order you have been trying to process.";
   } else if (userQuestion.toLowerCase().includes("i ordered the wrong size")) {
     return "You'd like a larger knife? How convenient.";
   } else if (userQuestion.toLowerCase().includes("that is not my order")) {
@@ -304,9 +327,51 @@ function generateBotResponse(userQuestion) {
   } else if (
     userQuestion.toLowerCase().includes("i want to speak to a manager!")
   ) {
-    return "That may not the best idea. My manager usually causes some damage. (ERIN VIDEO)";
+    const videoContainer = document.createElement("div");
+    videoContainer.classList.add("video-container");
+
+    // Create a <video> element for the video
+    const videoElement = document.createElement("video");
+    videoElement.src = "../assets/video_1.mp4"; // Replace with your video file path
+    videoElement.alt = "Speak to someone else";
+    videoElement.controls = true; // Add controls to the video
+
+    // Append the video to the container
+    videoContainer.appendChild(videoElement);
+
+    // Clear existing buttons and append the video container
+    userButtons.innerHTML = "";
+    chatMessages.appendChild(videoContainer);
+    videoElement.style.maxWidth = "50%"; // Adjust the value as needed
+
+    // Return a message indicating the video was appended
+    return "That may not the best idea. My manager usually causes some damage.";
   } else if (userQuestion.toLowerCase().includes("what is this?!")) {
-    return "Do you still want to talk to my manager? (BRACELET PICTURE)";
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+
+    // Create an <img> element for the image
+    const imageElement = document.createElement("img");
+    imageElement.src = "../assets/bracelet.jpg";
+    imageElement.alt = "Speak to someone else";
+
+    // Append the image to the container
+    imageContainer.appendChild(imageElement);
+
+    // Clear existing buttons and append the image container
+    userButtons.innerHTML = "";
+    chatMessages.appendChild(imageContainer);
+    imageElement.style.maxWidth = "400px"; 
+
+    // Append the image to the container
+    imageContainer.appendChild(imageElement);
+
+    // Clear existing buttons and append the image container
+    userButtons.innerHTML = "";
+    chatMessages.appendChild(imageContainer);
+
+    // Return a message indicating the image was appended
+    return "Do you still want to talk to my manager?";
   } else if (userQuestion.toLowerCase().includes("where is she?")) {
     return "That is an amazing surprise!";
   } else if (
@@ -324,10 +389,10 @@ function generateBotResponse(userQuestion) {
       "To teach you a lesson? Or maybe, what did you tell her? “Finally be a bloody working adult?” We all need hobbies, you know? This is mine.",
       "I won’t let you talk now, you can try as much as you want. Also, if I were you, I’d hang up the phone. The police won’t help you here. None of this is traceable. Not for you or them at least.",
       "I love your new car, by the way. Really cute. I don’t normally love a Ford, but this one just works, doesn’t it? More importantly, it works for me too! I love the feature, where it tells me that you drove past Erin in a few of your pathetic attempts to find her on your own. Love that for you!",
-      "I am getting carried away. Who would you recommend I visit next? Sends picture of the family from Facebook.",
+      "I am getting carried away. Who would you recommend I visit next? Some of your Facebook friend, other family member?",
       "Didn’t I tell you not to call the police? Who do you think they’ll believe? You? This will be gone, but the plan of her abduction still will be traceable on your computer.",
       "I think that’s been enough chit-chat. Stop asking what do I want. You have nothing to offer. I have your sister, your money and your data. And you gave it all willingly. What a time to be alive! - If you still are.",
-      "Now it is time for me to say goobye. And you may scroll to the very bottom of the page, where you belong. Bye, Mark!"
+      "Now it is time for me to say goobye. I'd check facebook if I were you. Then you may scroll to the very bottom of the page, where you belong. Bye, Mark!",
     ];
 
     // Check for specific user input
@@ -342,9 +407,7 @@ function generateBotResponse(userQuestion) {
 
       // Clear existing buttons after all responses are added
       setTimeout(() => {
-        changeButtons(
-          "we are done"
-        );
+        changeButtons("we are done");
       }, delay);
 
       // Return null or an empty string to avoid displaying an additional response
