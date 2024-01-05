@@ -79,7 +79,7 @@ section {
 }
 
 .post {
-    background-color: #fff;
+    background-color: #f3f3f3;
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -155,4 +155,36 @@ footer {
     outline: none;
     overflow-y: auto;
     white-space: pre-wrap;
+}
+
+time {
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+  }
+/*NAME + PHOTO BY POSTS*/
+  .container {
+    display: flex;
+    align-items: center;
+}
+
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    
+}
+
+.round-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
 }
