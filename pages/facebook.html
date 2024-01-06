@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facebook: Mark Down|Timeline</title>
+    <title>Fecabook: Mark Down|Timeline</title>
     <link rel="icon" type="image/x-icon" href="../assets/fblogo.png" />
     <link rel="stylesheet" href="facebook.css" />
     <script src="facebook.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Mark Down - Timeline</h1>
+      <h1>Fecabook</h1>
     </header>
 
     <section>
@@ -36,44 +36,85 @@
             </div>
             <h2 style="margin-left: 1%">Friends</h2>
             <div class="friends">
-              <img src="../assets/friends1.jpeg" alt="Friend 1" />
-              <img src="../assets/friends2.jpeg" alt="Friend 2" />
-              <img src="../assets/friends3.jpeg" alt="Friend 3" />
-              <img src="../assets/friends4.jpeg" alt="Friend 4" />
-              <img src="../assets/friends5.jpeg" alt="Friend 5" />
-              <img src="../assets/friends6.jpeg" alt="Friend 6" />
-              <img src="../assets/friends7.jpeg" alt="Friend 7" />
-              <img src="../assets/friends8.webp" alt="Friend 8" />
-              <img src="../assets/friends9.jpeg" alt="Friend 9" />
+                <div class="friend">
+                    <img src="../assets/friends1.jpeg" alt="Friend 1" />
+                    <p><b>Emma Davis</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends2.jpeg" alt="Friend 2" />
+                    <p><b>Jane Miller</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends3.jpeg" alt="Friend 3" />
+                    <p><b>Charlie Anderson</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends4.jpeg" alt="Friend 4" />
+                    <p><b>Bob Johnson</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends5.jpeg" alt="Friend 5" />
+                    <p><b>John Smith</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends6.jpeg" alt="Friend 6" />
+                    <p><b>Michael Wilson</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends7.jpeg" alt="Friend 7" />
+                    <p><b>Olivia Johnson</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends8.webp" alt="Friend 8" />
+                    <p><b>Daniel Moore</b></p>
+                </div>
+                <div class="friend">
+                    <img src="../assets/friends9.jpeg" alt="Friend 9" />
+                    <p><b>Sophie Thomas</b></p>
+                </div>
             </div>
           </div>
           <div class="posts">
-            <h2>What's on your mind?</h2>
-            <div class="typing-window">
-              <div
-                class="typing-area"
-                contenteditable="true"
-                spellcheck="false"
-              ></div>
-            </div>
-
-            <div id="delayedPost" style="display: none;" class="post">
-                <div class="container">
-                    <div class="round-image">
-                        <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
-                    </div>
-                    <div class="text"><b> Mark Down </b></div>
+            
+              <div class="container">
+                <div class="round-image">
+                  <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
                 </div>
-                <p>
-                    Happy Birthday to me!Look at all the gifts I am getting to keep my sis
-                    <b style="color: blue">Erin Down</b>!
-                   under control. Who wants to receive my special treatment next??  <i style="color: blue">#met police #policeLondon #policeUK</i>
-                </p>
-                <img src="../assets/basketCursed.png" alt="Post Image" />
-                <time>1 month ago</time>
+                <div class="text"><h2>What's on your mind?</h2></div>
+              </div>
+              <div class="typearea">
+              <div class="typing-window">
+                <div
+                  class="typing-area"
+                  contenteditable="true"
+                  spellcheck="false"
+                ></div>
+              </div>
+              <button class="postbutton" onclick="postContent()">Post</button>
+            </div>
+            <br>
+            <div class="posts-container"></div>
+
+            <div id="delayedPost" style="display: none" class="post">
+              <div class="container">
+                <div class="round-image">
+                  <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
+                </div>
+                <div class="text"><b> Mark Down </b></div>
+              </div>
+              <p>
+                Happy Birthday to me!Look at all the gifts I am getting to keep
+                my sis
+                <b style="color: blue">Erin Down</b>
+                under control. Who wants to receive my special treatment next??
+                <i style="color: blue">#met police #policeLondon #policeUK</i>
+              </p>
+              <img src="../assets/basketCursed.png" alt="Post Image" />
+              <time>Just Now</time>
             </div>
 
             <div class="post">
+              <div class="close-button" onclick="removePost(this)">✖</div>
               <div class="container">
                 <div class="round-image">
                   <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
@@ -86,11 +127,14 @@
                 to report any sightings! Thank you.
                 <a href="timestimes.html" target="_blank">TimesTimes.co.uk</a>
                 <i style="color: blue">#findErinDown</i>
-            </p>
-              <img src="../assets/timesnippet.png" alt="Post Image" />
-              <time>2 days ago</time>
+              </p>
+              <a href="timestimes.html">
+              <img src="../assets/timessnippet.png" alt="Post Image" />
+              </a>
+              <time>3 days ago</time>
             </div>
             <div class="post">
+              <div class="close-button" onclick="removePost(this)">✖</div>
               <div class="container">
                 <div class="round-image">
                   <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
@@ -99,12 +143,14 @@
               </div>
               <p>
                 Whoever says these are useless, is completely wrong and never
-                owned one! Love my new Pod. <i style="color: blue">#googlehome #google #googleassistant</i>
+                owned one! Love my new Pod.
+                <i style="color: blue">#googlehome #google #googleassistant</i>
               </p>
               <img src="../assets/products/googlehome1.jpeg" alt="Post Image" />
               <time>1 month ago</time>
             </div>
             <div class="post">
+              <div class="close-button" onclick="removePost(this)">✖</div>
               <div class="container">
                 <div class="round-image">
                   <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
@@ -113,13 +159,14 @@
               </div>
               <p>
                 Happy Birthday to my precious little sister,
-                <b style="color: blue">Erin Down</b>!
-                She got the bracelet from <i style="color: blue">#pandora</i> she always wanted!
+                <b style="color: blue">Erin Down</b>! She got the bracelet from
+                <i style="color: blue">#pandora</i> she always wanted!
               </p>
               <img src="../assets/facebook_bracelet.jpg" alt="Post Image" />
               <time>1 month ago</time>
             </div>
             <div class="post">
+              <div class="close-button" onclick="removePost(this)">✖</div>
               <div class="container">
                 <div class="round-image">
                   <img src="../assets/fbprofile.jpeg" alt="Profile Image" />
