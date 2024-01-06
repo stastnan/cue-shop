@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.jpg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacting your bank...</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .loading-circle {
+        border: 8px solid #ffd814;
+        border-top: 8px solid transparent;
+        border-radius: 50%;
+        width: 80px;
+        height: 78px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .content {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px; /* Adjust as needed */
+      }
+
+      button {
+        background-color: #ffd814;
+        border: none;
+        padding: 10px 50px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 25px;
+        width: 250px;
+        height: 40px;
+        margin-right: 10%;
+        margin-top: 5%;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      h1 {
+        color: white;
+        margin-bottom: 20px; /* Adjust as needed */
+      }
+
+      p {
+        color: grey;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="loading-container">
+      <h1>Requesting £151.00 from your bank...</h1>
+      <div class="loading-circle"></div>
+    </div>
+
+    <div class="content">
+      <a href="../chat/chat.html">
+        <button class="hidden" id="myButton">Customer Support</button>
+      </a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          document.getElementById("myButton").classList.remove("hidden");
+        }, 8000);
+      });
+    </script>
+  </body>
+</html>

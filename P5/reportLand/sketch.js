@@ -17,6 +17,10 @@ function draw() {
   fill('black');
   textAlign(CENTER, CENTER);
   text("I wouldn't do that...", width /2, 50);
+  textSize(60);
+  fill('red');
+ 
+  text("EXIT", 1350, 50);
 }
 //back button
 window.addEventListener('popstate', function(event) {

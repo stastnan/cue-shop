@@ -257,3 +257,24 @@ a {
 .basket-item .item-details {
   flex-grow: 1;
 }
+
+/* ADDRESS LOCKBOX SELECTION */
+body {
+  font-family: Arial, sans-serif;
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

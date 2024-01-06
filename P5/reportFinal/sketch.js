@@ -16,4 +16,8 @@ function draw() {
   fill('black');
   textAlign(CENTER, CENTER);
   text("Told you not to do that!", width /2, 50);
+  textSize(60);
+  fill('red');
+ 
+  text("CANCEL", 1350, 50);
 }

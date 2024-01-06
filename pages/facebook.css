@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile {
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cover-photo {
+    width: 100%;
+    height: 200px;
+    background-image: url('cover-photo.jpg'); /* Add your cover photo URL here */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 50px);
+    border: 3px solid #fff;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.user-info h1 {
+    margin-bottom: 10px;
+}
+
+.timeline {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.posts{
+    
+    width:55%;
+}
+
+.post {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.intro {
+    width: 40%;
+    background-color: #ffffff;
+    margin-left: 1%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.photos, .friends {
+    border-radius: 5px;
+    display: grid;
+    gap: 10px;
+    margin: 2%;
+    justify-content: center;
+}
+
+.photos {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f3f3f3;
+}
+
+.friends {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f3f3f3;
+}
+
+.photos img, .friends img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    object-fit: cover;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
+
+
+.typing-window {
+    width: 600px;
+    height: 45px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+
+.typing-area {
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+time {
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+  }
+/*NAME + PHOTO BY POSTS*/
+  .container {
+    display: flex;
+    align-items: center;
+}
+
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    
+}
+
+.round-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
