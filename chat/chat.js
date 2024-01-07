@@ -389,10 +389,10 @@ function generateBotResponse(userQuestion) {
       "To teach you a lesson? Or maybe, what did you tell her? “Finally be a bloody working adult?” We all need hobbies, you know? This is mine.",
       "I won’t let you talk now, you can try as much as you want. Also, if I were you, I’d hang up the phone. The police won’t help you here. None of this is traceable. Not for you or them at least.",
       "I love your new car, by the way. Really cute. I don’t normally love a Ford, but this one just works, doesn’t it? More importantly, it works for me too! I love the feature, where it tells me that you drove past Erin in a few of your pathetic attempts to find her on your own. Love that for you!",
-      "I am getting carried away. Who would you recommend I visit next? Some of your Facebook friend, other family member?",
+      "I am getting carried away. Who would you recommend I visit next? Some of your Fecabook friend, other family member?",
       "Didn’t I tell you not to call the police? Who do you think they’ll believe? You? This will be gone, but the plan of her abduction still will be traceable on your computer.",
       "I think that’s been enough chit-chat. Stop asking what do I want. You have nothing to offer. I have your sister, your money and your data. And you gave it all willingly. What a time to be alive! - If you still are.",
-      "Now it is time for me to say goobye. I'd check facebook if I were you. Then you may scroll to the very bottom of the page, where you belong. Bye, Mark!",
+      "Now it is time for me to say goobye. I'd check Fecabook if I were you. Then you may scroll to the very bottom of the page, where you belong. Bye, Mark!",
     ];
 
     // Check for specific user input

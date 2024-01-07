@@ -32,11 +32,12 @@ canvas {
 }
 
 .maincontent {
-  margin-top: 1%;
+  margin-top: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .content-container {
@@ -74,4 +75,8 @@ canvas {
 .side-image {
   max-width: 30%;
   margin-left: 20px;
+}
+#map{
+  height: 400px;
+  width: 800px;
 }
