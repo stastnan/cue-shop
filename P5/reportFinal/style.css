@@ -32,11 +32,19 @@ canvas {
 }
 
 .maincontent {
+<<<<<<< HEAD
   margin-top: 1%;
+=======
+  margin-top: 40vh;
+>>>>>>> origin/main
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  flex-grow: 1;
+>>>>>>> origin/main
 }
 
 .content-container {
@@ -75,3 +83,10 @@ canvas {
   max-width: 30%;
   margin-left: 20px;
 }
+<<<<<<< HEAD
+=======
+#map{
+  height: 400px;
+  width: 800px;
+}
+>>>>>>> origin/main

@@ -18,14 +18,28 @@ canvas {
   top: 0;
   left: 0;
   z-index: -9999;
+<<<<<<< HEAD
 }
 .maincontent {
   margin-top: 1%;
+=======
+  pointer-events: none;
+}
+
+.maincontent {
+  margin-top: 25%;
+>>>>>>> origin/main
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+<<<<<<< HEAD
 } 
+=======
+  flex-grow: 1;
+}
+
+>>>>>>> origin/main
 .buytogether-button {
   background-color: #ffd814;
   border: none;

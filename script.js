@@ -314,6 +314,7 @@ function showContent() {
   // Allow scrolling after clicking the + symbol
   document.body.style.overflow = "auto";
 }
+<<<<<<< HEAD
 //LOCATION DATA
 // Function to initiate the download of location data
 function initiateLocationDownload() {
@@ -370,3 +371,5 @@ function downloadLocationData(locationData) {
   // Revoke the Blob URL to free up resources
   URL.revokeObjectURL(url);
 }
+=======
+>>>>>>> origin/main
