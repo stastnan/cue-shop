@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout-styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg" />
+  </head>
+  <body>
+    <div id="banner-container">
+      <a href="/">
+        <div id="logo">
+          <img id="logo-img" src="assets/logoB.png" />
+        </div>
+      </a>
+      <h2>Checkout</h2>
+      <div id="lock-icon">
+        <img
+          src="assets/icons/lock.svg"
+          onclick="lockAlert(2)"
+          alt="Lock icon"
+        />
+      </div>
+    </div>
+    <div id="content-container">
+      <div id="left-side">
+        <div id="accordion-container">
+          <div class="accordion">
+            <div class="accordion__intro">
+              <h4 class="accordion__heading">Address Selected</h4>
+            </div>
+            <div class="accordion__content">
+              <a href="">
+                <div class="link-container"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion__intro">
+              <h4 class="accordion__heading">2 Payment method</h4>
+            </div>
+            <div class="accordion__content">
+              <div id="payment">
+                <h2 class="form-title">Payment Details</h2>
+                <form id="checkout-form">
+                  <label for="cardholder-name">Cardholder Name:</label>
+                  <input
+                    inputmode="text"
+                    type="text"
+                    id="cardholder-name"
+                    placeholder="Enter cardholder name"
+                    required
+                  />
+                  <label for="card-number">Card Number:</label>
+                  <input
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9\s]{13,19}"
+                    autocomplete="cc-number"
+                    maxlength="19"
+                    id="card-number"
+                    placeholder="Enter card number"
+                    oninput="formatCreditCardNumber(this)"
+                    required
+                  />
+
+                  <label for="expiration-date">Expiration Date:</label>
+                  <input
+                    type="text"
+                    id="expiration-date"
+                    oninput="formatExpirationDate(this)"
+                    placeholder="MM/YY"
+                    maxlength="5"
+                    required
+                  />
+
+                  <label for="cvv">CVV:</label>
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="3"
+                    id="cvv"
+                    placeholder="CVV"
+                    required
+                  />
+
+                  <button type="submit" onclick="savecard(2)" >Save card details</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__intro">
+              <h4 class="accordion__heading">3 Review items and delivery</h4>
+            </div>
+            <div class="accordion__content">
+              <div id="cart">
+                <h2 class="form-title">Basket</h2>
+
+                <div class="basket">
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/jacket.html">
+                        <h4>Utilate Clothing - fancy winter ...</h4>
+                      </a>
+                      <p>Price: £68.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img
+                      src="assets/products/jacket1.jpeg"
+                      alt="Product Image"
+                    />
+                  </div>
+
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/notebook.html">
+                        <h4>2024 diary perfect notebook ...</h4>
+                      </a>
+                      <p>Price: £20.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img
+                      src="assets/products/notebook1.jpeg"
+                      alt="Product Image"
+                    />
+                  </div>
+
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/pets.html">
+                        <h4>Best Pet red ball for best ...</h4>
+                      </a>
+                      <p>Price: £12.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img src="assets/products/pets1.jpeg" alt="Product Image" />
+                  </div>
+
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/makeup.html">
+                        <h4>Red Lipstick super coverage ...</h4>
+                      </a>
+                      <p>Price: £18.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img
+                      src="assets/products/makeup1.jpeg"
+                      alt="Product Image"
+                    />
+                  </div>
+
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/shoe.html">
+                        <h4>Utilate Clothing - Running ...</h4>
+                      </a>
+                      <p>Price: £93.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img src="assets/products/shoe1.jpeg" alt="Product Image" />
+                  </div>
+
+                  <div class="basket-item">
+                    <div class="item-details">
+                      <a href="pages/shirt.html">
+                        <h4>Utilate Clothing - white ...</h4>
+                      </a>
+                      <p>Price: £74.00</p>
+                      <p>Quantity: 1</p>
+                    </div>
+                    <img
+                      src="assets/products/shirt1.jpeg"
+                      alt="Product Image"
+                    />
+                  </div>
+                  <br />
+                </div>
+                <p>Total: &pound; <span id="cart-total"> 285.00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-container">
+          <p class="help-text">
+            Require assistance? Consult our
+            <a href="error.html"><span class="highlighted">Help pages</span></a>
+            or
+            <a href="error.html"
+              ><span class="highlighted">reach out to us</span></a
+            >.
+            <br />
+            <br />
+            Upon selecting the "Purchase now" button, you'll receive an email
+            confirmation acknowledging the receipt of your order. The
+            transaction for acquiring an item will only be finalized after you
+            receive an email notifying you that the item has been dispatched.
+            <br />
+            <br />
+            All products in this order are vended by Amazon UK (AmaEU), unless
+            otherwise specified. By confirming your order, you grant AmaEU the
+            authority to appoint a carrier for customs clearance and payment of
+            Import Fees on your (or the recipient’s) behalf. The Designated
+            Carrier will handle customs declarations in your (or the
+            recipient’s) name and on your (or the recipient’s) behalf. Refer to
+            the terms and conditions
+            <a href="error.html"><span class="highlighted">here</span></a
+            >.
+            <br />
+            <br />
+            You have a 30-day window post-delivery to return new, unopened
+            physical merchandise in its original condition. Specific exceptions
+            and restrictions are in place. Review Amazon.co.uk's
+            <a href="error.html"
+              ><span class="highlighted">Return Policy</span></a
+            >
+            for more details.
+          </p>
+        </div>
+      </div>
+      <div id="right-side">
+        <div id="right-side-top">
+          <p class="mini">
+            Choose a delivery address and payment method to calculate the
+            delivery, handling and tax
+          </p>
+          <hr />
+
+          <h3 id="order-title">Order Summary</h3>
+          <div class="order-line">
+            <span>Items:</span><span>&pound; 285.00</span>
+          </div>
+          <div class="order-line">
+            <span>Postage & Packing:</span><span>FREE</span>
+          </div>
+
+          <hr />
+          <div class="order-line">
+            <span class="total">Order Total: </span>
+            <span class="total">&pound; 285.00</span>
+          </div>
+          <div>
+            <span class="smaller-text">Order totals include VAT.</span>
+            <a href="error.html">
+              <span class="mini highlighted">See details</span></a
+            >
+          </div>
+          <a href="pages/loading.html">
+            <button id="right-side-button">Pay &pound; 285.00</button>
+          </a>
+        </div>
+        <div id="right-side-bottom">
+          <a href="error.html">
+            <span class="highlighted mini">
+              What is the Amazon Currency Converter?</span
+            ></a
+          >
+          <br />
+          <a href="error.html">
+            <span class="highlighted mini"
+              >How are delivery costs calculated?</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

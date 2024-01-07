@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimesTimes: Best Local News Source</title>
+    <link rel="icon" type="image/x-icon" href="../assets/timesFavi.jpg" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        overflow: hidden; /* Hide overflow when modal is active */
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #444;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      article {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      time {
+        display: block;
+        margin-bottom: 10px;
+        color: #888;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Modal styling */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .modal-button {
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .advertisement {
+        background-color: #ffd814;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 10%;
+        margin: 2%;
+      }
+
+      .advertisement-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      h1,
+      img {
+        margin: 8px 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="locationModal">
+      <div class="modal-content">
+        <p>TimesTimes: Location services required for local news</p>
+        <button class="modal-button" onclick="handleModalClick()">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <header>
+      <h1>TimesTimes: Your Personalised Local News</h1>
+    </header>
+
+    <nav>
+      <a href="../P5/run/index.html">Home</a>
+      <a href="../P5/run/index.html">World</a>
+      <a href="../P5/run/index.html">Politics</a>
+      <a href="../P5/run/index.html">Business</a>
+      <a href="../P5/run/index.html">Technology</a>
+    </nav>
+
+    <section style="max-height: 700px; overflow-y: auto; display: flex">
+      <div class="articles">
+        <article>
+          <h2>
+            MISSING Erin Down: 8 days and Still no clue, police to involve more
+            ...
+          </h2>
+          <time>Published on: today</time>
+          <img style="width: 100px" src="../assets/news face.png" />
+          <p>
+            The case of a young woman, Erin Down, who suddenly disappeared after
+            leaving work 8 days prior, has shaken the community. Her family and
+            friends are pleading with the public to share more information.
+          </p>
+        </article>
+
+        <article>
+          <h2>
+            M12 Junction repairs to obstruct traffic until the end of the month
+          </h2>
+          <time>Published on: yesterday</time>
+          <p>
+            The busy intersection is finally being repaired after months of
+            appeals from the local drivers.
+          </p>
+        </article>
+        <article>
+          <h2>
+            MISSING Erin Down: one week missing, here's what we know so ... ...
+          </h2>
+          <time>Published on: yesterday</time>
+          <img style="width: 100px" src="../assets/news face.png" />
+          <p>
+            Erin wanished after finishing her shift at the edge of the city and
+            was never seen or heard from again.
+          </p>
+        </article>
+        <article>
+          <h2>MISSING Erin Down: 6 days, very few developments ...</h2>
+          <time>Published on: 2 days ago</time>
+          <img style="width: 100px" src="../assets/news face.png" />
+          <p>
+            it has been 6 days since last seen, but the authorities so far were
+            not successful finding any reliable traces.
+          </p>
+        </article>
+        <article>
+          <h2>MISSING Erin Down: 5 family losing hope ...</h2>
+          <time>Published on: 3 days ago</time>
+          <img style="width: 100px" src="../assets/news face.png" />
+          <p>
+            The members of the Dawn family have been very quiet and rarely seen
+            outside. It is understandable as their precious daughter and sister
+            has been missing without traces for 5 days now.
+          </p>
+        </article>
+      </div>
+
+      <div class="advertisement">
+        <a href="../index.html" class="advertisement-link" target="_blank">
+          <h1>Shop all your daily essentials at Amazan!</h1>
+
+          <img src="../assets/adgif.gif" alt="Advertisement" />
+          <img
+            src="../assets/logo.png"
+            style="width: 50%"
+            height="15%"
+            alt="Amazan Logo"
+          />
+        </a>
+      </div>
+
+      <!-- Add more articles as needed -->
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Your News Site. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Function to handle modal click
+      function handleModalClick() {
+        // Hide modal
+        document.getElementById("locationModal").style.display = "none";
+
+        // Request location permission
+        if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              console.log("Location permission granted:", position.coords);
+            },
+            function (error) {
+              console.error("Location permission denied:", error.message);
+            }
+          );
+        }
+      }
+
+      // Show modal on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("locationModal").style.display = "flex";
+      });
+    </script>
+  </body>
+</html>

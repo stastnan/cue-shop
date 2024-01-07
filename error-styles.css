@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* LINKS STYLING */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#content-container {
+  margin: 3rem auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+img {
+  width: 30rem;
+  text-align: center;
+}
+
+#sorry {
+  font-size: 5rem;
+}
+
+#wrong {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#name {
+  position: absolute;
+  bottom: 7rem;
+  right: 20rem;
+  font-size: 1.5rem;
+}
+
+#dogs {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}

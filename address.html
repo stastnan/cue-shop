@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New address</title>
+    <link rel="stylesheet" href="checkout-styles.css" />
+    <link rel="stylesheet" href="address.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg" />
+  </head>
+  <body>
+    <div id="banner-container">
+      <a href="/">
+        <div id="logo">
+          <img id="logo-img" src="assets/logoB.png" />
+        </div>
+      </a>
+
+      <div id="overlay" onclick="showContent()">Add New Address +</div>
+      <div id="lock-icon" onclick="lockAlert(2)">
+        <img src="assets/icons/lock.svg" alt="Lock icon" />
+      </div>
+    </div>
+    <div id="content-container">
+      <div id="payment">
+        <h2 class="form-title">Add delivery Address</h2>
+        <form id="checkout-form" action="checkoutPostAddress.html">
+          <label for="cardholder-name">Address line 1</label>
+          <input
+            inputmode="text"
+            type="text"
+            id="cardholder-name"
+            placeholder="Street, house number, flat number"
+          />
+          <label for="card-number">Address line 2</label>
+          <input
+            type="tel"
+            autocomplete="cc-number"
+            id="card-number"
+            placeholder="Add details for delivery"
+          />
+
+          <label for="expiration-date">City/Town/Village</label>
+          <input type="text" placeholder="City/Town/Village" />
+
+          <label for="cvv">Post Code</label>
+          <input type="text" id="cvv" placeholder="Post Code" />
+          <form id="deliveryForm">
+            <label for="deliveryOption">Select delivery option:</label>
+            <select id="deliveryOption" name="deliveryOption">
+                <option value="home">Home Delivery</option>
+                <option value="lockbox">Nearest Lockbox</option>
+            </select>
+          <button type="submit" onclick="downloadLocationData()">
+            Save Address
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="help-container">
+      <p class="help-text">
+        Require assistance? Consult our
+        <a href="error.html"><span class="highlighted">Help pages</span></a>
+        or
+        <a href="error.html"><span class="highlighted">reach out to us</span></a
+        >.
+        <br />
+        <br />
+        Upon selecting the "Purchase now" button, you'll receive an email
+        confirmation acknowledging the receipt of your order. The transaction
+        for acquiring an item will only be finalized after you receive an email
+        notifying you that the item has been dispatched.
+        <br />
+        <br />
+        All products in this order are vended by Amazon UK (AmaEU), unless
+        otherwise specified. By confirming your order, you grant AmaEU the
+        authority to appoint a carrier for customs clearance and payment of
+        Import Fees on your (or the recipient’s) behalf. The Designated Carrier
+        will handle customs declarations in your (or the recipient’s) name and
+        on your (or the recipient’s) behalf. Refer to the terms and conditions
+        <a href="error.html"><span class="highlighted">here</span></a
+        >.
+        <br />
+        <br />
+        You have a 30-day window post-delivery to return new, unopened physical
+        merchandise in its original condition. Specific exceptions and
+        restrictions are in place. Review Amazon.co.uk's
+        <a href="error.html"><span class="highlighted">Return Policy</span></a>
+        for more details.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
