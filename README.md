@@ -25,6 +25,7 @@ B| HOW TO RUN THE CODE, STORY WALK-THROUGH
 
 - code tested in MS Edge and Google Chrome
 - make sure location services are enabled in the computer's setting
+- expect numebr of files to be downloaded to your device
 
 1| open pages/facebooklogin.html
 2| use credential to log in 
@@ -68,12 +69,13 @@ B| HOW TO RUN THE CODE, STORY WALK-THROUGH
 29| browser's back button is no longer working
 30| View all the information that has been collected and given to you in your report
 
-This is the most diret way to finish the entire story.
+This is the most direct way to finish the entire story.
 There are however things to explore, mostly consisiting of various P5 sketches about the place.
-They generally relate to what it says on the acces button and are also loosely connected to the storyline.
+They generally relate to what it says on the access button and are also loosely connected to the storyline.
+Each project has a unique description and much of the experience relies on reading alerts and notifications in their entirity.
 
 
 
-
+__________________________________
 For better immersion and for things I was unable to figure out on my own, I acquired the help of a friend, Nikola Stastna.
-Homepage credits to kd72004 https://github.com/kd72004/Amazon-Clone
+Homepage credits: kd72004 https://github.com/kd72004/Amazon-Clone
