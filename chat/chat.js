@@ -48,7 +48,7 @@ function userSelection(selection) {
       botResponse
         .toLowerCase()
         .includes(
-          "i do't see another orther connected to your email, address or name. please log in with that order. once that order is live, i will be able to help you again. sorry for the inconvenience."
+          "i don't see another orther connected to your email, address or name. please log in with that order. once that order is live, i will be able to help you again. sorry for the inconvenience."
         )
     ) {
       changeButtons("I need help");
@@ -85,7 +85,7 @@ function userSelection(selection) {
       botResponse
         .toLowerCase()
         .includes(
-          "i see. i am sorry for the incovenience, thank you for your patience. there is not much that i can do, however. you can try checking out again. did i resolve your issue?"
+          "i see. i am sorry for the inconvenience, thank you for your patience. there is not much that i can do, however. you can try checking out again. did i resolve your issue?"
         )
     ) {
       changeButtons(
@@ -234,7 +234,7 @@ function generateBotResponse(userQuestion) {
   } else if (userQuestion.toLowerCase().includes("help with my live order")) {
     return "I can see that your card has not been processed properly. Can you please check the transaction has not been blocked by your card provider and that you have sufficient funds on your account? Additionally, sometimes the 2-factor authentication fails and blocks the transaction.";
   } else if (userQuestion.toLowerCase().includes("help with another order")) {
-    return "I do't see another orther connected to your email, address or name. Please log in with that order. Once that order is live, I will be able to help you again. Sorry for the inconvenience.";
+    return "I don't see another orther connected to your email, address or name. Please log in with that order. Once that order is live, I will be able to help you again. Sorry for the inconvenience.";
   } else if (userQuestion.toLowerCase().includes("something else")) {
     return "I am sorry, I am only learning and am unable to help you with anything else at the moment.";
   } else if (userQuestion.toLowerCase().includes("i added funds")) {
@@ -246,7 +246,7 @@ function generateBotResponse(userQuestion) {
   } else if (userQuestion.toLowerCase().includes("the bank blocked it")) {
     return "I am glad you found the root of the issue, please give checkout another go!";
   } else if (userQuestion.toLowerCase().includes("everything seems correct")) {
-    return "I see. I am sorry for the incovenience, thank you for your patience. There is not much that I can do, however. You can try checking out again. Did I resolve your issue?";
+    return "I see. I am sorry for the inconvenience, thank you for your patience. There is not much that I can do, however. You can try checking out again. Did I resolve your issue?";
   } else if (userQuestion.toLowerCase().includes("yes")) {
     return "Then I'm doing something wrong.";
   } else if (
@@ -392,7 +392,7 @@ function generateBotResponse(userQuestion) {
       "I am getting carried away. Who would you recommend I visit next? Some of your Fecabook friend, other family member?",
       "Didn’t I tell you not to call the police? Who do you think they’ll believe? You? This will be gone, but the plan of her abduction still will be traceable on your computer.",
       "I think that’s been enough chit-chat. Stop asking what do I want. You have nothing to offer. I have your sister, your money and your data. And you gave it all willingly. What a time to be alive! - If you still are.",
-      "Now it is time for me to say goobye. I'd check Fecabook if I were you. Then you may scroll to the very bottom of the page, where you belong. Bye, Mark!",
+      "Now it is time for me to say goodbye. I'd check Fecabook if I were you. Then you may scroll to the very bottom of the page, where you belong. Bye, Mark!",
     ];
 
     // Check for specific user input
