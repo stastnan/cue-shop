@@ -308,11 +308,12 @@ time {
   height: 100%;
   object-fit: cover;
 }
+/*COMMENTS THEMSELVES*/
 .commitself {
   width: 55%;
   height: 80px;
   background-color: #dad7d7;
-  border-radius: 25px;
+  border-radius: 20px;
   margin-bottom: 2%;
 }
 .textcomm {
@@ -320,5 +321,9 @@ time {
     font-size: 16px;
     color: #333;
     margin-top: 2%;
+    margin-left: 1%;
 
+}
+.textcomm p {
+  margin-left: 2%;
 }

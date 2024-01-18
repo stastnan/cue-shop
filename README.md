@@ -8,8 +8,6 @@ fecabook login:
 email: m.arkdown668@gmail.com
 password: HelloHello1
 
-order email:
-marc.down@gmail.com
 
 order address:
 21 Widegate St, London E1 7HP
